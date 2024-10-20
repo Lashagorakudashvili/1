@@ -29,8 +29,10 @@ let countdownFunction = setInterval(function() {
 /**/
 
 
-/**/
+/*/*/
+/*1*/
 let isScrolling = false;
+let startX;
 
 function scrollCarousel(direction) {
   if (isScrolling) return;
@@ -73,7 +75,8 @@ function scrollCarousel(direction) {
         left: maxScrollLeft,
         behavior: 'auto'
       });
-    } else {
+    } 
+    else {
       carousel.scrollBy({
         left: -scrollAmount,
         behavior: 'smooth'
@@ -83,8 +86,9 @@ function scrollCarousel(direction) {
 
   setTimeout(() => {
     isScrolling = false;
-  }, 500);
+  }, 700);
 }
+
 
 let autoScrollInterval = setInterval(() => {
   scrollCarousel(1);
@@ -99,7 +103,44 @@ carousel.addEventListener('mouseleave', () => {
     scrollCarousel(1);
   }, 4000);
 });
-/**/
+/*1*/
+
+/*2*/
+let isTouching = false;
+
+carousel.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+  isTouching = true;
+
+  clearInterval(autoScrollInterval);
+});
+
+carousel.addEventListener('touchmove', (e) => {
+  // Prevent default scrolling behavior on touch devices
+  e.preventDefault();
+}, { passive: false });
+
+carousel.addEventListener('touchend', (e) => {
+  const endX = e.changedTouches[0].clientX;
+  const deltaX = endX - startX;
+
+  // If the swipe is significant enough
+  if (Math.abs(deltaX) > 20) {
+    if (deltaX > 0) {
+      scrollCarousel(0);
+    } else {
+      scrollCarousel(1);
+    }
+  }
+
+  isTouching = false; // Reset the flag when touch ends
+
+  autoScrollInterval = setInterval(() => {
+    scrollCarousel(1);
+  }, 4000);
+});
+/*2*/
+/*/*/
 
 
 /**/
@@ -132,7 +173,6 @@ lineContnr.onclick = () => {
     }
 };
 /**/
-
 
 
 
