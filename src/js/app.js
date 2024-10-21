@@ -118,6 +118,8 @@ carousel.addEventListener('touchstart', (e) => {
 carousel.addEventListener('touchmove', (e) => {
   // Prevent default scrolling behavior on touch devices
   e.preventDefault();
+
+  clearInterval(autoScrollInterval);
 }, { passive: false });
 
 carousel.addEventListener('touchend', (e) => {
