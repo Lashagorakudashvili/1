@@ -622,7 +622,7 @@ a {
     }
 
     #crsl-imgs {
-        max-width: 240px !important;
+        max-width: 230px !important;
     }
 }
 
@@ -631,11 +631,11 @@ a {
 /**/
 @media (max-width: 400px) {
     .carousel-container {
-        max-width: 370px;
+        max-width: 360px;
     }
 
     #crsl-imgs {
-        max-width: 230px !important;
+        max-width: 220px !important;
     }
 }
 /**/
@@ -644,11 +644,11 @@ a {
 @media (max-width: 375px) {
 /*1*/ 
     .carousel-container {
-        max-width: 340px;
+        max-width: 350px;
     }
 
     #crsl-imgs {
-        max-width: 200px !important;
+        max-width: 210px !important;
     }
 /*1*/
 
