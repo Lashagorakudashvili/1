@@ -614,6 +614,20 @@ a {
 /**/
 
 
+
+
+@media (max-width: 450px) {
+    .carousel-container {
+        max-width: 370px;
+    }
+
+    #crsl-imgs {
+        max-width: 245px !important;
+    }
+}
+
+
+
 /**/
 @media (max-width: 400px) {
     .carousel-container {
