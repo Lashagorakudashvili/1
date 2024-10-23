@@ -183,5 +183,7 @@ lineContnr.onclick = () => {
 
 
 
+
+
 /*//////////////////////////////////*/
 /*daamate karosels auto scroll marto mashin roca sitize xar*/

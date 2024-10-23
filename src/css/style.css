@@ -657,6 +657,12 @@ a {
         padding: 0 20px 0 20px !important;
     }
 /*2*/
+
+/*3*/
+    #Venues-Tickets{
+        font-size: 25px !important;
+    }
+/*3*/
 }
 /**/
 
@@ -668,6 +674,10 @@ a {
 
     #crsl-imgs {
         max-width: 180px !important;
+    }
+
+    #left-cont-div {
+        left: -7px !important;
     }
 }
 /**/
@@ -749,10 +759,128 @@ a {
 #map-img {
     width: 100%;
     margin-top: -3rem;
+    text-align: center;
 }
 /**/
 
 
 
 
+
 /*//////////////////////////////////*/
+/**/
+#div-Venues-Tickets {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+#Venues-Tickets {
+    font-size: 30px;
+    font-weight: 800;
+    color: #2a2a2a;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}
+/**/
+
+
+/**/
+@media (max-width: 1405px) {
+    #tkt-price-1, #tkt-price-3 {
+        margin-top: 35px !important;
+    }
+}
+
+@media (max-width: 1352px) {
+    #tkt-price-1 {
+        margin-top: 10px !important;
+    }
+}
+/**/
+
+
+/**/
+@media (max-width: 990px) {
+    .card {
+        flex: 1 1 100% !important; /* Makes cards stack vertically when screen width is 990px or smaller */
+    }
+    .card-group {
+        gap: 0px !important;
+    }
+}
+/**/
+
+
+/*/*/
+.card-group {
+    padding: 0 30px 0 30px;
+    gap: 30px;
+}
+
+/*1*/
+.card-body {
+    background-color: #656c74;
+    color: white;
+    max-height: auto;
+    background-color: #656c74;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    width: 100%;
+}
+/*1*/
+
+/*2*/
+.card-title {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.card-title, .card-text {
+    margin-top: 20px;
+}
+/*2*/
+
+/*3*/
+#left-cont {
+    width: 31%;
+    background-color: rgba(124, 131, 139, 0.3);
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    z-index: 111;
+    top: 0;
+    padding: 0;
+    left: 0;
+}
+
+#left-cont-div {
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 50%;
+    margin-top: -22.5px;
+}
+
+#left-cont-div-a {
+    display: inline-block;
+    font-size: 14px;
+    padding: 12px 18px;
+    background-color: #fff;
+    color: #2a2a2a;
+    text-align: center;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: all .3s;
+}
+/*3*/
+
+/*4*/
+#right-cont {
+    width: 64%;
+    margin-left: 5%;
+    float: right;
+}
+/*4*/
+/*/*/
