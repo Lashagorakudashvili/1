@@ -106,6 +106,34 @@ carousel.addEventListener('mouseleave', () => {
 /*1*/
 
 /*2*/
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    clearInterval(autoScrollInterval);
+  } else {
+    autoScrollInterval = setInterval(() => {
+      scrollCarousel(1);
+    }, 4000);
+  }
+});
+/*2*/
+
+/*3*/
+window.addEventListener('resize', () => {
+  clearInterval(autoScrollInterval);
+
+  const carousel = document.querySelector('.card-group-carousel');
+  carousel.scrollTo({
+    left: 0,
+    behavior: 'auto'
+  });
+
+  autoScrollInterval = setInterval(() => {
+    scrollCarousel(1);
+  }, 4000);
+});
+/*3*/
+
+/*4*/
 let isTouching = false;
 
 carousel.addEventListener('touchstart', (e) => {
@@ -116,7 +144,6 @@ carousel.addEventListener('touchstart', (e) => {
 });
 
 carousel.addEventListener('touchmove', (e) => {
-  // Prevent default scrolling behavior on touch devices
   e.preventDefault();
 
   clearInterval(autoScrollInterval);
@@ -126,7 +153,6 @@ carousel.addEventListener('touchend', (e) => {
   const endX = e.changedTouches[0].clientX;
   const deltaX = endX - startX;
 
-  // If the swipe is significant enough
   if (Math.abs(deltaX) > 20) {
     if (deltaX > 0) {
       scrollCarousel(0);
@@ -135,13 +161,13 @@ carousel.addEventListener('touchend', (e) => {
     }
   }
 
-  isTouching = false; // Reset the flag when touch ends
+  isTouching = false;
 
   autoScrollInterval = setInterval(() => {
     scrollCarousel(1);
   }, 4000);
 });
-/*2*/
+/*4*/
 /*/*/
 
 
@@ -175,15 +201,3 @@ lineContnr.onclick = () => {
     }
 };
 /**/
-
-
-
-
-
-
-
-
-
-
-/*//////////////////////////////////*/
-/*daamate karosels auto scroll marto mashin roca sitize xar*/
