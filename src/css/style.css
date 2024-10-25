@@ -1048,7 +1048,7 @@ a {
     }
 
     .footer-container {
-        max-width: 1300px !important; 
+        max-width: 1293px !important; 
     }
 
     .footer-left {
@@ -1056,7 +1056,7 @@ a {
     }
 
     #footer-center {
-        margin-left: 7rem !important;
+        margin-left: 5rem !important;
     }
 }
 /**/
@@ -1173,7 +1173,7 @@ a {
     }
 
     #footer-column {
-       margin-left: 7rem;
+       margin-left: 5rem;
     }
 
     .footer-bottom {
@@ -1182,7 +1182,7 @@ a {
 
     #footer-center {
         margin-top: 10px;
-        margin-left: 3rem;
+        margin-left: -0.5rem;
     }
     
     .footer {
@@ -1227,10 +1227,6 @@ a {
     #footer-column-3-p5 {
         padding-bottom: 50px; 
         margin-left: 6.9rem;
-    }
-
-    #footer-center {
-        margin-left: 2rem;
     }
 }
 /**/
