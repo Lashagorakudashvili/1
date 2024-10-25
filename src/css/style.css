@@ -1064,7 +1064,7 @@ a {
 
 /**/
 .footer {
-    background-color: #f8f8f8;
+    background-color: white;
     padding: 40px 0;
 }
 
@@ -1110,8 +1110,8 @@ a {
 }
 
 .footer-bottom {
-    background-color: #fff;
-    border-top: 1px solid #e3e3e3;
+    background-color: white;
+    border-top: 1px solid white;
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
@@ -1239,13 +1239,13 @@ a {
 /**/
 @media (width <= 990px) {
     .footer {
-        background-color: #f8f8f8!important;
+        background-color: white!important;
         padding: 60px 0 0px !important;
         margin-top: 2rem !important;
         line-height: 30px;
     }
     
-    .footer-container {
+    .-container {
         display: flex;
         justify-content: space-between !important;
         max-width: 1200px !important;
@@ -1296,8 +1296,8 @@ a {
     }
     
     .footer-bottom {
-        background-color: #fff !important;
-        border-top: 1px solid #e3e3e3 !important;
+        background-color: white !important;
+        border-top: 1px solid white !important;
         padding: 20px 0 !important;
         display: flex  !important;
         justify-content: space-between !important;
